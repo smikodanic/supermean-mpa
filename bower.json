@@ -1,0 +1,22 @@
+{
+  "name": "supermean-mpa",
+  "version": "1.0.0",
+  "authors": [
+    "Sasa Mikodanic"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "font-awesome": "~4.5.0"
+  }
+}

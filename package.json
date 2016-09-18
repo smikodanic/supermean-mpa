@@ -1,0 +1,40 @@
+{
+  "name": "supermean-mpa",
+  "version": "1.0.0",
+  "author": "Sasa Mikodanic",
+  "license": "MIT",
+  "title": "SuperMEAN-MPA",
+  "description": "SuperMEAN-MPA is framework for fast development of Multi Page Apps in NodeJS, ExpressJS.",
+  "homepage": "http://www.supermean.org",
+  "main": "server.js",
+  "dependencies": {
+    "bluebird": "^3.3.5",
+    "body-parser": "^1.10.2",
+    "chalk": "^0.5.1",
+    "debug": "^2.1.3",
+    "ejs": "^2.3.4",
+    "express": "^4.11.2",
+    "morgan": "^1.7.0",
+    "nodemon": "^1.9.1",
+    "vhost": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodedump": "0.0.8"
+  },
+  "scripts": {
+    "start": "node server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/smikodanic/supermean-mpa.git"
+  },
+  "keywords": [
+    "supermean",
+    "supermean mpa",
+    "nodejs",
+    "nodejs framework",
+    "multi page app",
+    "multi page application",
+    "javascript framework"
+  ]
+}

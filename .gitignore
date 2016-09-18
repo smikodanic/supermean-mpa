@@ -1,0 +1,12 @@
+node_modules
+bower_components
+
+# Elasticbeanstalk files
+.elasticbeanstalk/*
+
+# SASS cache files
+.gulp-scss-cache/*
+.sass-cache/*
+
+#tmp files
+server/tmp/*
