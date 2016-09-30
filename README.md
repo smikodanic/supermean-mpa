@@ -1,6 +1,8 @@
 # SuperMEAN - MPA
 SuperMEAN-MPA is framework for fast development of Multi Page Apps in NodeJS, ExpressJS.
 
+More information on [www.supermean.org](http://www.supermean.org) .
+
 ## FEATURES
 - NodeJS / [ExpressJS](http://expressjs.com)
 - Twitter Bootstrap 3 and jQuery
