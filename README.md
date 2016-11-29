@@ -16,9 +16,11 @@ More information on [www.supermean.org](http://www.supermean.org) .
 &nbsp;
 
 ## INSTALLATION
-`git clone --depth 1 git@github.com:smikodanic/supermean-mpa.git <your-project>`
-`npm install`
-`bower install`
+```bash
+npm install -g generator-supermean
+yo supermean
+nodemon server
+```
 
 &nbsp;
 
