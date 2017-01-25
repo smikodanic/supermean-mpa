@@ -1,15 +1,8 @@
+
 /**
- * ***** /server/app/routes/index.js
- * SuperMEAN root endpoints
+ * GET /
  */
-
-var config = require('../config');
-var express = require('express');
-var router = express.Router();
-
-
-/* endpoint: GET / */
-router.get('/', function (req, res) {
+module.exports.home = function (req, res) {
     'use strict';
     var vdata = {
         title: 'SuperMean - MPA',
@@ -17,11 +10,13 @@ router.get('/', function (req, res) {
         keywords: 'supermean, supermean mpa, multi page app, multi page application, nodejs, expressjs'
     };
     res.render('public/index', vdata);
-});
+};
 
 
-/* endpoint: GET /page */
-router.get('/page', function (req, res) {
+/**
+ * GET /page
+ */
+module.exports.page = function (req, res) {
     'use strict';
     var vdata = {
         title: 'SuperMean - MPA',
@@ -29,7 +24,5 @@ router.get('/page', function (req, res) {
         keywords: 'supermean, supermean mpa, multi page app, multi page application, nodejs, expressjs'
     };
     res.render('public/page', vdata);
-});
+};
 
-
-module.exports = router;

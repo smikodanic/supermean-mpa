@@ -6,6 +6,9 @@
  * - routing
  */
 
+/* enables requireing from root, for example require('server/app/config') */
+require('rootpath')();
+
 var config = require('./config');
 var express = require('express');
 var app = express();
@@ -23,7 +26,6 @@ app.set('view engine', 'ejs');
 //***********************
 require('./middlewares/logger_morgan.js')(app, config); //must be first to log each request (also static files)
 require('./middlewares/debug.js')(app, config);
-require('./middlewares/errors.js')(app, config);
 require('./middlewares/favicon.js')(app);
 // require('./middlewares/cookieParser.js')(app);
 require('./middlewares/bodyParser.js')(app);
@@ -54,19 +56,14 @@ app.use('/bower', express.static(path.join(__dirname, '/../../bower_components')
 
 //****** SERVER SIDE ROUTES *****
 //*******************************
-app.use('/', require('./routes/index.js'));
+app.use('/', require('./routes/_routes.js'));
 
 
-/* endpoint: GET /404 */
-app.use(function (req, res) {
-    'use strict';
-    var vdata = {
-        title: 'Page Not Found',
-        desc: 'Error 404: web page not found.',
-        keywords: '404, not found'
-    };
-    res.status(404).render('_errors/error404', vdata);
-});
+/******************** ERROR HANDLERS ********************/
+/*******************************************************/
+app.use(require('./middlewares/error.js').badurl); //404 not found middleware. Must be last middleware !
+app.use(require('./middlewares/error.js').sender); //send error to client, sentry and mongo
+require('./middlewares/error.js').uncaught(); //uncaught exceptions
 
 
 module.exports = app;

@@ -17,13 +17,13 @@ var config = {
             {
                 name: 'supermeandev',
                 isActive: true, //true || false (if false then app will not use this mongodb)
-                uri: process.env.MONGODB_URI_1 || 'mongodb://supermean_user:smPass@127.0.0.1:27017/supermeandev',
+                uri: process.env.MONGODB_URI_1 || 'mongodb://supermean_user:xxx@127.0.0.1:27017/supermeandev',
                 driver: 'mongoose'
             },
             {
                 name: 'supermeandev2',
                 isActive: true,
-                uri: process.env.MONGODB_URI_2 || 'mongodb://supermean_user:somePass@127.0.0.1:27017/supermeandev2',
+                uri: process.env.MONGODB_URI_2 || 'mongodb://supermean_user:xxx@127.0.0.1:27017/supermeandev2',
                 driver: 'mongoose'
             }
         ]
