@@ -1,12 +1,13 @@
 /**
- * ************** /server/app/index.js
+ * ************** /server/app/_app.js
  * Main application file
  * - set view engine
  * - middlewares
  * - routing
+ * - error reporting
  */
 
-/* enables requireing from root, for example require('server/app/config') */
+/* access files from root, for example require('server/app/config') */
 require('rootpath')();
 
 var config = require('./config');
@@ -54,7 +55,7 @@ app.use('/bower', express.static(path.join(__dirname, '/../../bower_components')
 
 
 
-//****** SERVER SIDE ROUTES *****
+//****** ROUTES *****
 //*******************************
 app.use('/', require('./routes/_routes.js'));
 
