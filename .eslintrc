@@ -1,15 +1,28 @@
 {
+  "extends": "eslint:recommended",
 	"globals": {
-		//global variables
-		"jQuery": true,
-        "$": true,
-		"angular": true,
+		"jQuery": false,
+    "$": false,
+		"angular": false,
+    "window": true,
+    "document": true,
+    "Highcharts": true,
+    "Promise": true
 	},
-	"env": { //env in which I will write
-		"browser": true,
+	"env": {
+		"browser": false,
 		"node": true
 	},
-	"rules": { //0-off, 1-warn, 2-on
-		"quotes": [1, "single"]
-	}
+	"rules": {
+		"quotes": [1, "single"],
+		"indent": [1, 2],
+		"no-var": 2,
+    "no-console": ["error", { "allow": ["log", "error", "info"] }],
+    "no-extra-boolean-cast": 0,
+    "no-unused-vars": 1
+	},
+	"parserOptions": {
+		"ecmaVersion": 2017,
+    "sourceType": "module"
+ 	}
 }
